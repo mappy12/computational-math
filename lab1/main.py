@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy import integrate
 
 
@@ -69,7 +70,8 @@ def task_5():
         print(f"Интеграл расходится: {e}")
 
 def task_6():
-
+    plt.figure(figsize=(8,5))
+    a
 
 def main():
     print("###########Задание 1##########", "\n")
