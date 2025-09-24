@@ -12,6 +12,18 @@ def main():
     b = np.identity(10, dtype=int)
     print(b, "\n")
 
+    print("###########Задание 2##########", "\n")
+
+    mtrx = np.array([[2, 1, 3, 6],
+                     [4, 1, 3, 3],
+                     [5, 2, 4, 1],
+                     [5, 1, 2, 2]])
+
+    det = np.linalg.det(mtrx)
+
+    print("Матрица:", "\n", "\n", mtrx, "\n")
+    print("Определитель: ", det, "\n")
+    print(f"Определитель (в целочисленном виде): {int(det)}")
 
 if __name__ == "__main__":
     main()
