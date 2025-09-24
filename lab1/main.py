@@ -25,6 +25,29 @@ def task_2():
 
 
 def task_3():
+    a = np.random.randint(-3, 6, (4, 4))
+
+    print("Случайная матрица из целых чисел из отрезка [-3, 5] размера 4х4:", "\n")
+    print(a, "\n")
+
+    b = np.random.randint(-10, 11, (4, 1))
+
+    print("Вектор-столбец B подходящего размера: ", "\n")
+    print(b, "\n")
+
+    try:
+        x = np.linalg.solve(a, b)
+        x_round = np.round(x, 4)
+
+        print("Решение системы:", "\n\n", x_round, "\n")
+
+        print("----Проверка----", "\n")
+        check = np.dot(a, x).astype(int)
+        print("(A * X): ", "\n\n" , check, "\n")
+        print("Вектор B:", "\n")
+        print(b)
+    except np.linalg.LinAlgError:
+        print("Система не имеет единственного решения!")
 
 
 
@@ -40,6 +63,7 @@ def main():
     print("###########Задание 3##########", "\n")
 
     task_3()
+
 
 
 if __name__ == "__main__":
