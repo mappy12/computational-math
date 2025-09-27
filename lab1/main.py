@@ -69,9 +69,33 @@ def task_5():
     except Exception as e:
         print(f"Интеграл расходится: {e}")
 
+
 def task_6():
-    plt.figure(figsize=(8,5))
-    a
+    plt.figure(figsize=(12,7))
+    ax = plt.subplot(111)
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+
+    x = np.linspace(-5, 10, 500)
+
+    y1 = 3 * np.sin(x)
+    y2 = np.sqrt(x + 5)
+
+    ax.plot(x, y1, 'orange', linewidth=2, label='$y = 3\sin(x)$')
+    ax.plot(x, y2, 'magenta', linewidth=2, label='$y = \sqrt{x + 5}$')
+
+    ax.set_xlabel('x', fontsize=12)
+    ax.set_ylabel('y', fontsize=12)
+    ax.set_title('Graph', fontsize=14)
+
+    ax.legend(loc='lower right', fontsize=12)
+    ax.grid(True, alpha=0.3)
+
+    plt.show()
+
 
 def main():
     print("###########Задание 1##########", "\n")
